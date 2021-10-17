@@ -12,6 +12,8 @@ section {
   justify-content: center;
   align-items: center;
   scroll-snap-align: start;
+  flex-direction: column;
+  align-content: space-between;
 }
 
 .container {
@@ -34,4 +36,44 @@ section {
 
 .four {
   background: rgb(114, 114, 114);
+}
+
+.socials {
+  align-self: stretch;
+  height: 10vh;
+}
+
+.socials-list {
+  list-style-type: none;
+  text-align: right;
+}
+
+.profile {
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 10vh;
+  /* align-self: stretch; */
+  width: 75vh;
+}
+
+/* .profile img {
+  border-radius: 50%;
+  height: 180px;
+  width: 180px;
+  padding-bottom: 10px;
+} */
+
+#first-name {
+  font-size: 10em;
+  text-align: left;
+  align-self: stretch;
+}
+
+#last-name {
+  font-size: 10em;
+  text-align: right;
+  align-self: stretch;
 }
