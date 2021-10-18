@@ -4,6 +4,8 @@
   box-sizing: border-box;
   font-family: sans-serif;
   color: white;
+  font-family: "DM Serif Text", serif;
+  z-index: 1;
 }
 
 section {
@@ -41,11 +43,14 @@ section {
 .socials {
   align-self: stretch;
   height: 10vh;
+  padding-top: 12.5%;
+  padding-right: 12.5%;
 }
 
 .socials-list {
   list-style-type: none;
   text-align: right;
+  font-size: 1.5em;
 }
 
 .profile {
@@ -55,16 +60,8 @@ section {
   display: flex;
   flex-direction: column;
   padding-bottom: 10vh;
-  /* align-self: stretch; */
   width: 75vh;
 }
-
-/* .profile img {
-  border-radius: 50%;
-  height: 180px;
-  width: 180px;
-  padding-bottom: 10px;
-} */
 
 #first-name {
   font-size: 10em;
@@ -77,3 +74,34 @@ section {
   text-align: right;
   align-self: stretch;
 }
+
+span::before {
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+span:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+span::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  inset: 0 0 0 0;
+  background: rgb(114, 114, 114);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+span {
+  position: relative;
+}
+
+/* TODO: add media query to control when the hover affects can be used for the list
+TODO: also specify them for mobile devices */
