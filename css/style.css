@@ -103,6 +103,10 @@ span {
   position: relative;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Animation */
 
 @keyframes fadeInUp {
