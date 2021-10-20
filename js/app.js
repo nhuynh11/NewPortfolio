@@ -19,7 +19,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  observer.observe(document.querySelector('.one'));
+  observer.observe(document.querySelector('.landing'));
+  observer.observe(document.querySelector('.projects'));
+  observer.observe(document.querySelector('.about'));
+  observer.observe(document.querySelector('.contact'));
 
 
 
