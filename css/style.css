@@ -43,13 +43,18 @@ i.material-icons-outlined.project-icons {
 }
 
 .about-content {
-  margin-top: 3%;
   width: 75vh;
+  margin-top: 3%;
 }
 
 .contact {
   background: rgb(0, 0, 0);
   justify-content: start;
+}
+
+.contact-content {
+  width: 75vh;
+  flex-grow: 1;
 }
 
 .socials {
@@ -82,11 +87,6 @@ i.material-icons-outlined.project-icons {
 
 .section-heading-2 {
   text-align: center;
-}
-
-.content {
-  flex-grow: 1;
-  margin-top: 5%;
 }
 
 .footer {
@@ -136,6 +136,15 @@ i.material-icons-outlined.project-icons {
 
 a {
   text-decoration: none;
+}
+
+.modal-header {
+  text-align: center;
+}
+
+.modal-description {
+  width: 75%;
+  margin-top: 3%;
 }
 
 /* Fading Animation */
@@ -194,6 +203,7 @@ a {
   border-radius: 10px;
   transition: 1s;
   cursor: pointer;
+  padding: 5%;
 }
 .fsm .fa {
   transition: 1s;
@@ -208,7 +218,7 @@ a {
   width: 0;
   margin: 0;
 }
-.fsm h1.modal-content {
+.fsm div.modal-content {
   opacity: 0;
   transition: 1s;
 }
@@ -219,7 +229,7 @@ a {
   background: rgb(27, 27, 27);
 }
 
-.fsm.growing h1.modal-content {
+.fsm.growing div.modal-content {
   height: auto;
   margin: 0;
   opacity: 0;
@@ -239,11 +249,11 @@ a {
   width: auto;
   margin: inital;
 }
-.fsm.full-screen h1.modal-content {
+.fsm.full-screen div.modal-content {
   transition-delay: 0.5s;
   opacity: 1;
 }
-.fsm.shrinking h1.modal-content {
+.fsm.shrinking div.modal-content {
   transition-delay: 0s;
   transition: 0.5s;
   opacity: 0;
