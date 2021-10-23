@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   color: white;
-  font-family: "DM Serif Text", serif;
+  font-family: "Varela Round", sans-serif;
   font-style: normal;
   z-index: 1;
 }
@@ -40,6 +40,7 @@ i.material-icons-outlined.project-icons {
 .about {
   background: rgb(0, 0, 0);
   justify-content: start;
+  display: flex;
 }
 
 .about-content {
@@ -49,11 +50,11 @@ i.material-icons-outlined.project-icons {
 .contact {
   background: rgb(0, 0, 0);
   justify-content: start;
+  display: flex;
 }
 
-.contact-content {
-  width: 75vh;
-  flex-grow: 1;
+.contact-image {
+  border-radius: 10px;
 }
 
 .socials {
@@ -82,16 +83,17 @@ i.material-icons-outlined.project-icons {
 .section-heading {
   font-size: 3em;
   margin-top: 12.5vh;
-  margin-bottom: 0.5%;
 }
 
 .section-heading-2 {
   text-align: center;
+  margin: 2%;
 }
 
 .footer {
   justify-content: end;
   margin-bottom: 12.5vh;
+  margin-top: auto;
 }
 
 #first-name {
@@ -106,17 +108,22 @@ i.material-icons-outlined.project-icons {
   align-self: stretch;
 }
 
-.li span::before {
+#skills-heading {
+  margin-top: 10%;
+}
+
+/* menu list styling*/
+span::before {
   transform: scaleX(0);
   transform-origin: bottom right;
 }
 
-.li span:hover::before {
+span:hover::before {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-.li span::before {
+span::before {
   content: " ";
   display: block;
   position: absolute;
@@ -130,7 +137,7 @@ i.material-icons-outlined.project-icons {
   transition: transform 0.3s ease;
 }
 
-.li span {
+span {
   position: relative;
 }
 
@@ -181,7 +188,6 @@ a {
 
 /* div expansion styling */
 .fsm {
-  margin: 10vh 5vw;
   background-color: rgb(27, 27, 27);
   height: 100px;
   flex: 1;
@@ -189,27 +195,27 @@ a {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  color: #f5f5f5;
+  color: white;
   font-size: 1.5rem;
   border-radius: 10px;
   transition: 1s;
   cursor: pointer;
+  margin: 5%;
   padding: 5%;
 }
 .fsm .fa {
   transition: 1s;
-  color: #f5f5f5;
+  color: white;
   font-size: 2.5vw;
 }
 .fsm .fa:before {
-  color: #f5f5f5;
+  color: white;
 }
 .fsm .modal-content {
   height: 0;
   width: 0;
   margin: 0;
   display: flex;
-  padding-top: 3%;
 }
 .fsm div.modal-content {
   opacity: 0;
@@ -255,8 +261,9 @@ a {
 .fsm-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  width: 75%;
   box-sizing: border-box;
+  flex-direction: column;
 }
 
 .modal-header {
@@ -265,13 +272,83 @@ a {
 
 .modal-description {
   width: 75%;
-  padding: 3%;
+  margin: 3%;
 }
 
 .modal-img {
   max-width: 60vh;
   height: auto;
   border-radius: 10px;
+  margin: 3%;
+}
+
+/* skills styling */
+.skills {
+  width: 50%;
+}
+@keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-webkit-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-moz-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+@-o-keyframes load {
+  from {
+    width: 0%;
+  }
+}
+
+.bar {
+  background-color: rgb(27, 27, 27);
+  padding: 2px;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: white;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+.bar::before {
+  content: attr(data-skill);
+  background-color: rgb(114, 114, 114);
+  display: inline-block;
+  padding: 5px 0 5px 10px;
+  border-radius: inherit;
+  animation: load 2s 0s;
+  -webkit-animation: load 2s 0s;
+  -moz-animation: load 2s 0s;
+  -o-animation: load 2s 0s;
+}
+
+.bar.front::before {
+  background-color: rgb(114, 114, 114);
+}
+.bar.back::before {
+  background-color: rgb(114, 114, 114);
+}
+
+.bar.learning::before {
+  width: calc(20% - 10px);
+}
+.bar.basic::before {
+  width: calc(40% - 10px);
+}
+.bar.intermediate::before {
+  width: calc(60% - 10px);
+}
+.bar.advanced::before {
+  width: calc(80% - 10px);
+}
+.bar.expert::before {
+  width: calc(100% - 10px);
 }
 
 /* TODO: add media query to control when the hover affects can be used for the list
