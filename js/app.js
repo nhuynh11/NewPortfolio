@@ -4,10 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       const animated = entry.target.querySelectorAll('.animated');
-      console.log(animated);
+      const animatedSkill = entry.target.querySelectorAll('.animated-skill');
       if (entry.isIntersecting) {
         for (let i = 0; i < animated.length; i++) {
           animated[i].classList.add('fadeInUp');
+        }
+        for (let i = 0; i < animatedSkill.length; i++) {
+          animatedSkill[i].classList.add('bar');
         }
       return; // if we added the class, exit the function
       }
@@ -16,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
       for (let i = 0; i < animated.length; i++) {
         animated[i].classList.remove('fadeInUp');
       }
+      for (let i = 0; i < animatedSkill.length; i++) {
+        animatedSkill[i].classList.remove('bar');
+      }
     });
   });
 
@@ -23,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(document.querySelector('.projects'));
   observer.observe(document.querySelector('.about'));
   observer.observe(document.querySelector('.contact'));
+  observer.observe(document.querySelector('skills'));
 
 
   // expanding divs setup
