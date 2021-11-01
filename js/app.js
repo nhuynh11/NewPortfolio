@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   observer.observe(document.querySelector('.projects'));
   observer.observe(document.querySelector('.about'));
   observer.observe(document.querySelector('.contact'));
-  observer.observe(document.querySelector('skills'));
+  observer.observe(document.querySelector('.skills'));
 
 
   // expanding divs setup

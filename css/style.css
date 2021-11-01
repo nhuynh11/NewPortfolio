@@ -44,7 +44,8 @@ i.material-icons-outlined.project-icons {
 }
 
 .about-content {
-  width: 75vh;
+  margin-left: 12.5vh;
+  margin-right: 12.5vh;
 }
 
 .contact {
@@ -53,25 +54,34 @@ i.material-icons-outlined.project-icons {
   display: flex;
 }
 
-.contact-image {
+.image-container {
+  padding-left: 12.5vh;
+  padding-right: 12.5vh;
+}
+
+.image-container img {
   border-radius: 10px;
+  height: auto;
+  max-width: 100%;
+  min-width: 350px;
 }
 
 .socials {
   align-self: stretch;
-  height: 10vh;
-  padding-top: 12.5%;
-  padding-right: 12.5%;
 }
 
 .socials-list {
   list-style-type: none;
   text-align: right;
   font-size: 1.5em;
+  margin-bottom: 12.5%;
+}
+
+.socials-list li {
+  padding-right: 12.5vh;
 }
 
 .profile {
-  height: 90vh;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -112,7 +122,7 @@ i.material-icons-outlined.project-icons {
   margin-top: 10%;
 }
 
-/* menu list styling*/
+/* menu list animation styling*/
 span::before {
   transform: scaleX(0);
   transform-origin: bottom right;
@@ -196,7 +206,7 @@ a {
   align-items: center;
   flex-direction: column;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1em;
   border-radius: 10px;
   transition: 1s;
   cursor: pointer;
@@ -353,3 +363,48 @@ a {
 
 /* TODO: add media query to control when the hover affects can be used for the list
 TODO: also specify them for mobile devices */
+
+/* TODO: fix paragraph text for phone screens, make modals flex row instead of col for small screens */
+@media (max-width: 600px) {
+  .about-content {
+    margin-left: 1vh;
+    margin-right: 1vh;
+  }
+
+  .fsm .modal-content {
+    height: 0;
+    width: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    padding: auto;
+    align-items: center;
+  }
+
+  .modal-img {
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  .modal-description {
+    width: 100%;
+    margin: 3%;
+  }
+
+  .socials-list li {
+    padding-right: 3vh;
+  }
+}
+
+@media (max-width: 950px) {
+  #first-name {
+    font-size: 5em;
+    align-self: center;
+  }
+
+  #last-name {
+    font-size: 5em;
+    align-self: center;
+  }
+}
